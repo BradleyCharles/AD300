@@ -5,7 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 public class TestOptionPane03 {
 
     public static void main(String[] args) {
-        String choice = ask("100 % to 95.0%", "<95.0 % to 94.0%", "<94.0 % to 93.0%", "<93.0 to 92.0%", "<92.0 % to 91.0%", "<91.0 % to 90.0%", "<90.0 % to 89.0%", "<89.0 % to 88.0%", "<88.0 % to 87.0%", "<87.0 % to 86.0%", "<86.0 % to 85.0%", "<85.0 % to 84.0%", "<84.0 % to 83.0%", "<83.0 % to 82.0%", "<82.0 % to 81.0%", "<81.0 % to 80.0%", "<80.0 % to 79.0%", "<79.0 % to 78.0%", "<78.0 % to 77.0%", "<77.0 % to 76.0%", "<76.0% to 75.0%", "<75.0% to 74.0%", "<74.0% to 73.0%", "<73.0% to 72.0%", "<72.0% to 71.0%", "<71.0% to 70.0%", "<70.0% to 69.0%", "<69.0% to 68.0%", "<68.0% to 67.0%", "<67.0% to 66.0%", "<66.0% to 65.0%", "<65.0% to 0.0%");
+        String choice = ask("100 % to 95.0%", "<95.0% to 94.0%", "<94.0% to 93.0%", "<93.0% to 92.0%", "<92.0% to 91.0%", "<91.0% to 90.0%", "<90.0% to 89.0%", "<89.0% to 88.0%", "<88.0% to 87.0%", "<87.0% to 86.0%", "<86.0% to 85.0%", "<85.0% to 84.0%", "<84.0% to 83.0%", "<83.0% to 82.0%", "<82.0% to 81.0%", "<81.0% to 80.0%", "<80.0% to 79.0%", "<79.0% to 78.0%", "<78.0% to 77.0%", "<77.0% to 76.0%", "<76.0% to 75.0%", "<75.0% to 74.0%", "<74.0% to 73.0%", "<73.0% to 72.0%", "<72.0% to 71.0%", "<71.0% to 70.0%", "<70.0% to 69.0%", "<69.0% to 68.0%", "<68.0% to 67.0%", "<67.0% to 66.0%", "<66.0% to 65.0%", "<65.0% to 0.0%");
         String result = "Null";
 
         if (choice.equals("100 % to 95.0%")) {
@@ -16,23 +16,23 @@ public class TestOptionPane03 {
             result = "3.8";
         } else if (choice.equals("<93.0% to 92.0%")) {
             result = "3.7";
-        } else if (choice.equals("<92.0 % to 91.0%")) {
+        } else if (choice.equals("<92.0% to 91.0%")) {
             result = "3.6";
-        } else if (choice.equals("<91.0 % to 90.0%")) {
+        } else if (choice.equals("<91.0% to 90.0%")) {
             result = "3.5";
-        } else if (choice.equals("<90.0 % to 89.0%")) {
+        } else if (choice.equals("<90.0% to 89.0%")) {
             result = "3.4";
-        } else if (choice.equals("<89.0 % to 88.0%")) {
+        } else if (choice.equals("<89.0% to 88.0%")) {
             result = "3.3";
-        } else if (choice.equals("<88.0 % to 87.0%")) {
+        } else if (choice.equals("<88.0% to 87.0%")) {
             result = "3.2";
-        } else if (choice.equals("<87.0 % to 86.0%")) {
+        } else if (choice.equals("<87.0% to 86.0%")) {
             result = "3.1";
-        } else if (choice.equals("<86.0 % to 85.0%")) {
+        } else if (choice.equals("<86.0% to 85.0%")) {
             result = "3.0";
-        } else if (choice.equals("<85.0 % to 84.0%")) {
+        } else if (choice.equals("<85.0% to 84.0%")) {
             result = "2.9";
-        } else if (choice.equals("<84.0 % to 83.0%")) {
+        } else if (choice.equals("<84.0% to 83.0%")) {
             result = "2.8";
         } else if (choice.equals("<83.0% to 82.0%")) {
             result = "2.7";
