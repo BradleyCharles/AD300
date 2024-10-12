@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/AD300.iml" filepath="$PROJECT_DIR$/.idea/AD300.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week1/week1-GPA-to-Percent-range/week1-GPA-to-Percent-range.iml" filepath="$PROJECT_DIR$/Week1/week1-GPA-to-Percent-range/week1-GPA-to-Percent-range.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week1/week1-Percent-range-to-GPA/week1-Percent-range-to-GPA.iml" filepath="$PROJECT_DIR$/Week1/week1-Percent-range-to-GPA/week1-Percent-range-to-GPA.iml" />
+    </modules>
+  </component>
+</project>
