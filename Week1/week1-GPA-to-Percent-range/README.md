@@ -1,1 +1,1 @@
-
+I implemented a graphical user interface (GUI) in this project to enhance user experience, making the software more intuitive and user-friendly. This addition allows users to visualize changes more directly, streamlining interactions and improving the overall efficiency of the workflow.
