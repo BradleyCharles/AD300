@@ -23,36 +23,28 @@ public class Record_Manager {
         }
     }
 
-
     // Method to get all students with gpa greater than given value a formatted string
     public String getGreaterStudentsAsString(double gpa) {
         if (records.isEmpty()) {
             return "No students found.";
         }
-
         StringBuilder sb = new StringBuilder("Students with GPA greater than " + gpa + ":\n");
         for (Student student : records.values()) {
             if (student.getGpa() > gpa) { // Only include students with GPA greater than the specified value
                 sb.append(student).append("\n");
             }
         }
-
         if (sb.length() == 0) {
             return "No students with GPA greater than " + gpa + ".";
         }
-
         return sb.toString();
     }
-
-
-
 
     // Method to get all students as a formatted string
     public String getAllStudentsAsString() {
         if (records.isEmpty()) {
             return "No students found.";
         }
-
         StringBuilder sb = new StringBuilder("Student Records:\n");
         for (Student student : records.values()) {
             sb.append(student).append("\n");
