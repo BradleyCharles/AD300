@@ -37,6 +37,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "ID: " + id + ", Name: " + name + ", GPA: " + gpa;
+        return "ID: " + id + ", Name: " + name + ", GPA: " + String.format("%.1f", gpa);
     }
 }
