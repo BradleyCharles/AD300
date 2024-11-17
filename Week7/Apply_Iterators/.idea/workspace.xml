@@ -13,6 +13,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
@@ -25,13 +32,16 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/BradleyCharles/AD300.git&quot;,
-    &quot;accountId&quot;: &quot;7683011d-41aa-40b9-8514-bebf9b9b5c77&quot;
+    &quot;accountId&quot;: &quot;e04e4b38-30de-4bac-8c90-a8cdf81a7027&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2olQYpnCExoAAABXqZZZMTNe1cW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,7 +53,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/student/Documents/GitHub/AD300/Week7/Apply_Iterators&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/GitHub/AD300/Week7/Apply_Iterators&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -72,10 +82,23 @@
       <workItem from="1731614053115" duration="29000" />
       <workItem from="1731614209630" duration="562000" />
       <workItem from="1731616993445" duration="1059000" />
+      <workItem from="1731699295947" duration="2755000" />
+      <workItem from="1731793537979" duration="12895000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../Student_Record_Management/src/Student.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
