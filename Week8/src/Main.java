@@ -27,7 +27,7 @@ public class Main extends JFrame {
         JTextField studentIdField = new JTextField();
         JPanel idPanel = new JPanel(new GridLayout(2, 2, 5, 5));
 
-        // Student ID Field
+        // Student Name Field
         idPanel.add(new JLabel("Customer Name:"));
         idPanel.add(studentIdField);
         buttonPanel.add(idPanel);
