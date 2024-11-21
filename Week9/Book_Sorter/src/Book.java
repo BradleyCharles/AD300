@@ -1,10 +1,9 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Comparator;
 
-public class Book implements ComparableBook {
-    private String title;
-    private String author;
-    private int year;
+public class Book {
+    private final String title;
+    private final String author;
+    private final int year;
 
     // Constructor
     public Book(String title, String author, int year) {
@@ -14,55 +13,30 @@ public class Book implements ComparableBook {
     }
 
     // Getter and Setter for Title
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    public String getTitle() { return title; }
 
     // Getter and Setter for Author
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
+    public String getAuthor() { return author; }
 
     // Getter and Setter for Year
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-
+    public int getYear() { return year; }
 
     // compareTo method for comparing books by title
-    @Override
-    public int compareAuthor(Book other) {
-        return this.author.compareTo(other.getAuthor());
+    public static class compareTitle implements Comparator<Book> {
+        public int compare(Book o1, Book o2) {
+            return o1.getTitle().compareTo(o2.getTitle());
+        }
     }
 
-    // compareTo method for comparing books by title
-    @Override
-    public int compareTitle(Book other) {
-        return this.title.compareTo(other.getTitle());
+    public static class compareAuthor implements Comparator<Book> {
+        public int compare(Book o1, Book o2) {
+            return o1.getAuthor().compareTo(o2.getAuthor());
+        }
     }
 
-    // compareTo method for comparing books by title
-    @Override
-    public int compareYear(Book other) {
-        return Integer.compare(this.year, other.getYear());
-    }
-
-    // To display book details
-    @Override
-    public String toString() {
-        return "Title: " + title + ", Author: " + author + ", Year: " + year;
+    public static class compareYear implements Comparator<Book> {
+        public int compare(Book o1, Book o2) {
+            return o1.getYear() - o2.getYear();
+        }
     }
 }

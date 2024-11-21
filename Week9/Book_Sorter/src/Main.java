@@ -2,31 +2,21 @@
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import javax.swing.*;
 
-
+import static java.util.Collections.sort;
 
 public class Main extends JFrame {
-
-
-
-
-
-
-
-
 
     // Constructor for the main frame
     public Main() {
 
+        List<Book> bookSet = new ArrayList<>();
 
-
-
-
-
-        HashSet<Book> bookSet = new HashSet<>();
         // Add books to the HashSet
         bookSet.add(new Book("The Whispering Shadows", "Alden Whitmore", 2023));
         bookSet.add(new Book("Echoes of Tomorrow", "Selene Blackwood", 2021));
@@ -55,7 +45,7 @@ public class Main extends JFrame {
         bookSet.add(new Book("Journey to the Edge of Night", "Ophelia Crane", 2024));
 
         setTitle("School Management System"); // Set the title of the frame
-        setSize(750, 400); // Set the size of the frame
+        setSize(750, 500); // Set the size of the frame
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
@@ -72,11 +62,10 @@ public class Main extends JFrame {
         createButton("Sort by Title", e -> {
             try {
                 textArea.setText("");
+                bookSet.sort(new Book.compareTitle());
                 for (Book book : bookSet) {
-                    book.compareTitle(book.getTitle());
                     textArea.append(book.getTitle() + " by " + book.getAuthor() + " (" + book.getYear() + ")\n");
                 }
-
             } catch (Exception err) {
                 System.out.println("An error occurred.");
             }
@@ -90,8 +79,8 @@ public class Main extends JFrame {
         createButton("Sort by Author", e -> {
             try {
                 textArea.setText("");
+                bookSet.sort(new Book.compareAuthor());
                 for (Book book : bookSet) {
-                    book.compareAuthor(book);
                     textArea.append(book.getTitle() + " by " + book.getAuthor() + " (" + book.getYear() + ")\n");
                 }
             } catch (Exception err) {
@@ -107,8 +96,8 @@ public class Main extends JFrame {
         createButton("Sort by Year", e -> {
             try {
                 textArea.setText("");
+                bookSet.sort(new Book.compareYear());
                 for (Book book : bookSet) {
-                    book.compareYear(book);
                     textArea.append(book.getTitle() + " by " + book.getAuthor() + " (" + book.getYear() + ")\n");
                 }
             } catch (Exception err) {
