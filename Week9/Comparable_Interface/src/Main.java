@@ -10,7 +10,6 @@ public class Main extends JFrame {
     // Constructor for the main frame
     public Main() {
 
-
         List<Student> studentList = new ArrayList<>();
         studentList.add(new Student(1, "Sophia Adams", 3.2));
         studentList.add(new Student(2, "Liam Mitchell", 2.8));
@@ -37,7 +36,6 @@ public class Main extends JFrame {
         studentList.add(new Student(23, "Emily Baker", 3.5));
         studentList.add(new Student(24, "Henry Moore", 2.3));
         studentList.add(new Student(25, "Charlotte Nelson", 3.6));
-
 
         setTitle("AD 300 Component Software"); // Set the title of the frame
         setSize(750, 500); // Set the size of the frame
@@ -74,7 +72,7 @@ public class Main extends JFrame {
 
                 // Display sorted (and possibly reversed) student list
                 for (Student student : studentList) {
-                    textArea.append("ID #" + student.getID() + "\nName: " + student.getName() + "\nGPA: " + student.getGPA() + "\n-------------------------\n");
+                    textArea.append(" ID #" + student.getID() + "\n Name: " + student.getName() + "\n GPA: " + student.getGPA() + "\n-------------------------\n");
                 }
             } catch (Exception err) {
                 System.out.println("An error occurred: " + err.getMessage());
@@ -96,7 +94,7 @@ public class Main extends JFrame {
 
 
                 for (Student student : studentList) {
-                    textArea.append(" ID #" + student.getID() + "\n Name: " + student.getName() + " GPA: " + student.getGPA() + "\n"+"-------------------------"+"\n");
+                    textArea.append(" ID #" + student.getID() + "\n Name: " + student.getName() + "\n GPA: " + student.getGPA() + "\n"+"-------------------------"+"\n");
                 }
             } catch (Exception err) {
                 System.out.println("An error occurred.");
@@ -117,7 +115,7 @@ public class Main extends JFrame {
                 reverseGPA[0] = !reverseGPA[0];
 
                 for (Student student : studentList) {
-                    textArea.append(" ID #" + student.getID() + "\n Name: " + student.getName() + " GPA: " + student.getGPA() + "\n"+"-------------------------"+"\n");
+                    textArea.append(" ID #" + student.getID() + "\n Name: " + student.getName() + "\n GPA: " + student.getGPA() + "\n"+"-------------------------"+"\n");
                 }
             } catch (Exception err) {
                 System.out.println("An error occurred.");

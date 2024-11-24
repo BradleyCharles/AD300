@@ -1,9 +1,9 @@
 import java.util.Comparator;
 
 public class Student {
-    private int studentID;
-    private String studentName;
-    private double studentGPA;
+    private final int studentID;
+    private final String studentName;
+    private final double studentGPA;
 
     public Student(int studentID, String studentName, double studentGPA) {
         this.studentID = studentID;

@@ -18,31 +18,31 @@ public class Main extends JFrame {
         List<Book> bookSet = new ArrayList<>();
 
         // Add books to the HashSet
-        bookSet.add(new Book("The Whispering Shadows", "Alden Whitmore", 2023));
-        bookSet.add(new Book("Echoes of Tomorrow", "Selene Blackwood", 2021));
-        bookSet.add(new Book("Beneath the Silver Moon", "Elias Gray", 2020));
-        bookSet.add(new Book("The Forgotten Key", "Isabella Thornfield", 2022));
+        bookSet.add(new Book("The Whispering Shadows", "Declan Frost", 2023));
+        bookSet.add(new Book("Echoes of Tomorrow", "Declan Frost", 2021));
+        bookSet.add(new Book("Beneath the Silver Moon", "Lucian Rivers", 2020));
+        bookSet.add(new Book("The Forgotten Key", "Lucian Rivers", 2022));
         bookSet.add(new Book("The Last Ember", "Lucian Rivers", 2024));
         bookSet.add(new Book("Winds of the Forgotten Realm", "Katherine Wilder", 2019));
-        bookSet.add(new Book("In the Heart of the Storm", "Dorian Storm", 2021));
+        bookSet.add(new Book("In the Heart of the Storm", "Declan Frost", 2021));
         bookSet.add(new Book("The Midnight Oracle", "Seraphina Vale", 2020));
         bookSet.add(new Book("A Song of Thorns", "Maximilian Drake", 2023));
         bookSet.add(new Book("The Clockmaker's Curse", "Violet Ravenscroft", 2022));
-        bookSet.add(new Book("The Shattered Crown", "Harrison Crowe", 2018));
+        bookSet.add(new Book("The Shattered Crown", "Seraphina Vale", 2018));
         bookSet.add(new Book("Through the Veil of Stars", "Amelia Nightshade", 2024));
-        bookSet.add(new Book("Fate's Call", "Augustus Wren", 2017));
+        bookSet.add(new Book("Fate's Call", "Seraphina Vale", 2017));
         bookSet.add(new Book("The Cursed Library", "Iris Montgomery", 2021));
-        bookSet.add(new Book("The Silent Scribe", "Jasper Hawke", 2023));
+        bookSet.add(new Book("The Silent Scribe", "Seraphina Vale", 2023));
         bookSet.add(new Book("A Dance of Fire and Ice", "Lydia Everhart", 2020));
-        bookSet.add(new Book("The Veil Between Worlds", "Oliver Blackstone", 2022));
+        bookSet.add(new Book("The Veil Between Worlds", "Declan Frost", 2022));
         bookSet.add(new Book("The Bloodstone Prophecy", "Fiona Ashford", 2024));
         bookSet.add(new Book("Whispers in the Void", "Declan Frost", 2021));
         bookSet.add(new Book("The Lost Kingdoms", "Edgar Marlowe", 2019));
         bookSet.add(new Book("Waking the Sleeping Gods", "Penelope Vane", 2020));
         bookSet.add(new Book("The Hollow Throne", "Roland Wycliffe", 2023));
-        bookSet.add(new Book("Of Fire and Frost", "Fiona Sterling", 2021));
-        bookSet.add(new Book("The Alchemist's Legacy", "Gideon Redfern", 2022));
-        bookSet.add(new Book("Journey to the Edge of Night", "Ophelia Crane", 2024));
+        bookSet.add(new Book("Of Fire and Frost", "Lucian Rivers", 2021));
+        bookSet.add(new Book("The Alchemist's Legacy", "Lucian Rivers", 2022));
+        bookSet.add(new Book("Journey to the Edge of Night", "Lucian Rivers", 2024));
 
         setTitle("School Management System"); // Set the title of the frame
         setSize(750, 500); // Set the size of the frame
@@ -56,7 +56,7 @@ public class Main extends JFrame {
 
         // Button Panel
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(3, 1, 10, 10)); // # buttons, # columns, spacing
+        buttonPanel.setLayout(new GridLayout(4, 1, 10, 10)); // # buttons, # columns, spacing
 
         // Display buttons
         createButton("Sort by Title", e -> {
@@ -104,6 +104,27 @@ public class Main extends JFrame {
                 System.out.println("An error occurred.");
             }
         }, buttonPanel);
+
+        createButton("Sort by Author then Year", e -> {
+            try {
+                textArea.setText("");
+                bookSet.sort(new Book.compareAuthor().thenComparing(new Book.compareTitle()));
+
+                String currentAuthor = ""; // To track the current author
+                for (Book book : bookSet) {
+                    if (!book.getAuthor().equals(currentAuthor)) {
+                        if (!currentAuthor.isEmpty()) {
+                            textArea.append("---------------------------------------------------------------\n"); // Add separator before a new author's books
+                        }
+                        currentAuthor = book.getAuthor();
+                    }
+                    textArea.append(book.getTitle() + " by " + book.getAuthor() + " (" + book.getYear() + ")\n");
+                }
+            } catch (Exception err) {
+                System.out.println("An error occurred.");
+            }
+        }, buttonPanel);
+
 
         // Add button panel to the frame
         add(buttonPanel, BorderLayout.EAST);
