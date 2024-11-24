@@ -1,14 +1,9 @@
-
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import javax.swing.*;
-
-import static java.util.Collections.sort;
 
 public class Main extends JFrame {
 
@@ -108,8 +103,7 @@ public class Main extends JFrame {
         createButton("Sort by Author then Year", e -> {
             try {
                 textArea.setText("");
-                bookSet.sort(new Book.compareAuthor().thenComparing(new Book.compareTitle()));
-
+                bookSet.sort(new Book.compareAuthor().thenComparing(new Book.compareYear()));
                 String currentAuthor = ""; // To track the current author
                 for (Book book : bookSet) {
                     if (!book.getAuthor().equals(currentAuthor)) {
