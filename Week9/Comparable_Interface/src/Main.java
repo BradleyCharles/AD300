@@ -63,12 +63,12 @@ public class Main extends JFrame {
                 studentList.sort(new Student.compareID());
 
                 // Reverse the list if reverseGPA is true
-                if (reverseGPA[0]) {
+                if (reverseID[0]) {
                     Collections.reverse(studentList);
                 }
 
                 // Toggle the reverseGPA flag for the next click
-                reverseGPA[0] = !reverseGPA[0];
+                reverseID[0] = !reverseID[0];
 
                 // Display sorted (and possibly reversed) student list
                 for (Student student : studentList) {
