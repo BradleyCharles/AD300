@@ -9,11 +9,14 @@ public class Box<T> {
 
     public T getValue() {return value;}
 
-public String printBox() {
+    public String printBox() {
        return value.toString();
     }
 
-
+    public static String printBox(Box<? extends Number> box) {
+        // Demonstrates flexibility with wildcards by accessing Number-specific methods
+        return "Box contains: " + box.getValue() + " (double value: " + box.getValue().doubleValue() + ")";
+    }
 
 
 

@@ -34,6 +34,12 @@ public class Main extends JFrame {
         //NumberBox<String> numberBoxString = new NumberBox<>("String");
 
 
+        StringProcessor stringProcessor = new StringProcessor();
+
+        // Input string
+        String palindrome = "Bob drives a racecar really fast";
+
+
         // Display buttons
         createButton("Print String Box", e -> {
             try {
@@ -67,9 +73,29 @@ public class Main extends JFrame {
             }
         }, buttonPanel);
 
+        createButton("Print String", e -> {
+            try {
+                textArea.setText(palindrome);
+            } catch (Exception err) {
+                System.out.println("An error occurred.");
+            }
+        }, buttonPanel);
 
+        createButton("Print Reverse String", e -> {
+            try {
+                textArea.setText(stringProcessor.process(palindrome));
+            } catch (Exception err) {
+                System.out.println("An error occurred.");
+            }
+        }, buttonPanel);
 
-
+        createButton("Print Wildcard Box", e -> {
+            try {
+                textArea.setText(boxInt.printBox(boxInt));
+            } catch (Exception err) {
+                System.out.println("An error occurred.");
+            }
+        }, buttonPanel);
 
         // Add button panel to the frame
         add(buttonPanel, BorderLayout.EAST);

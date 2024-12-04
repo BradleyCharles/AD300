@@ -11,9 +11,4 @@ public class NumberBox<T extends Number> extends Box<T> {
   public Double printDouble() {
       return getValue().doubleValue();
   }
-
-  public Float printFloat() {
-      return getValue().floatValue();
-  }
-
 }
