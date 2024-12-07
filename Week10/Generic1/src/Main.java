@@ -22,7 +22,7 @@ public class Main extends JFrame {
 
         // Button Panel
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(4, 1, 10, 10)); // # buttons, # columns, spacing
+        buttonPanel.setLayout(new GridLayout(7, 1, 10, 10)); // # buttons, # columns, spacing
 
         // Box examples
         Box<String> boxString = new Box<>("What is the answer to life, the universe, and everything?");

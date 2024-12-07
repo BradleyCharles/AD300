@@ -6,15 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.*;
 
-
-
 public class Main extends JFrame {
     Integer value = 0;
     String word = "Hello";
+
     // Constructor for the main frame
     public Main() {
         setTitle("AD 300 Component Software"); // Set the title of the frame
-        setSize(750, 400); // Set the size of the frame
+        setSize(500, 500); // Set the size of the frame
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
@@ -25,7 +24,7 @@ public class Main extends JFrame {
 
         // Button Panel
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(10, 1, 10, 10)); // # buttons, # columns, spacing
+        buttonPanel.setLayout(new GridLayout(15, 1, 10, 10)); // # buttons, # columns, spacing
 
         //custom inputs
         ArrayList<Pair<Integer, String>> stringPair = new ArrayList<>();
@@ -62,14 +61,10 @@ public class Main extends JFrame {
         intCache.add("three", 3);
         intCache.add("four", 4);
 
-
-
-
-
         // Display buttons
         createButton("Print String", e -> {
             try {
-                textArea.setText(stringPair.toString());
+                textArea.setText(" "+stringPair);
             } catch (Exception err) {
                 System.out.println("An error occurred.");
             }
@@ -77,23 +72,18 @@ public class Main extends JFrame {
 
         createButton("Print Double", e -> {
             try {
-                textArea.setText(intDoublePair.toString());
+                textArea.setText(" "+intDoublePair);
             } catch (Exception err) {
                 System.out.println("An error occurred.");
             }
         }, buttonPanel);
 
-        // Add button panel to the frame
-        add(buttonPanel, BorderLayout.EAST);
-        setLocationRelativeTo(null);
-        setVisible(true);
-
         createButton("Check INT Stack", e -> {
             try {
                 if (stackInteger.isEmpty()){
-                    textArea.setText("Stack is empty");
+                    textArea.setText(" Stack is empty");
                 } else {
-                    textArea.setText("Stack is not empty");
+                    textArea.setText(" Stack is not empty");
                 }
 
             } catch (Exception err) {
@@ -104,8 +94,7 @@ public class Main extends JFrame {
         createButton("Add INT to Stack", e -> {
             try {
                 stackInteger.push(value);
-
-                textArea.setText("Added "+value+" to stack");
+                textArea.setText(" Added "+value+" to stack");
                 value += 1;
 
             } catch (Exception err) {
@@ -117,7 +106,7 @@ public class Main extends JFrame {
             try {
                 stackInteger.pop();
                 value -= 1;
-                textArea.setText("Removed "+value+" from stack");
+                textArea.setText(" Removed "+value+" from stack");
 
             } catch (Exception err) {
                 System.out.println("An error occurred.");
@@ -126,7 +115,7 @@ public class Main extends JFrame {
 
         createButton("Show INT Stack", e -> {
             try {
-                textArea.setText(stackInteger.printStack().toString());
+                textArea.setText(" "+stackInteger.printStack().toString());
             } catch (Exception err) {
                 System.out.println("An error occurred.");
             }
@@ -135,9 +124,9 @@ public class Main extends JFrame {
         createButton("Check STR Stack", e -> {
             try {
                 if (stackString.isEmpty()){
-                    textArea.setText("Stack is empty");
+                    textArea.setText(" Stack is empty");
                 } else {
-                    textArea.setText("Stack is not empty");
+                    textArea.setText(" Stack is not empty");
                 }
 
             } catch (Exception err) {
@@ -148,7 +137,7 @@ public class Main extends JFrame {
         createButton("Add STR to Stack", e -> {
             try {
                 stackString.push(word);
-                textArea.setText("Added String to stack");
+                textArea.setText(" Added String to stack");
                 word = "World";
             } catch (Exception err) {
                 System.out.println("An error occurred.");
@@ -158,7 +147,7 @@ public class Main extends JFrame {
         createButton("Remove STR from Stack", e -> {
             try {
                 stackString.pop();
-                textArea.setText("Removed integer to stack");
+                textArea.setText(" Removed integer to stack");
             } catch (Exception err) {
                 System.out.println("An error occurred.");
             }
@@ -166,7 +155,7 @@ public class Main extends JFrame {
 
         createButton("Show STR Stack", e -> {
             try {
-                textArea.setText(stackString.printStack().toString());
+                textArea.setText(" "+stackString.printStack().toString());
             } catch (Exception err) {
                 System.out.println("An error occurred.");
             }
@@ -174,7 +163,7 @@ public class Main extends JFrame {
 
         createButton("Print CollectionUtils", e -> {
             try {
-                textArea.setText(CollectionUtils.printCollection(stringList));
+                textArea.setText(" "+CollectionUtils.printCollection(stringList));
             } catch (Exception err) {
                 System.out.println("An error occurred.");
             }
@@ -183,47 +172,42 @@ public class Main extends JFrame {
         createButton("Show sum of list", e -> {
             try {
                 double sum = CollectionUtils.sumOfNumberList(integerList);
-                textArea.setText(Double.toString(sum));
+                textArea.setText(" "+sum);
             } catch (Exception err) {
                 System.out.println("An error occurred.");
             }
         }, buttonPanel);
 
-        createButton("List number in cache", e -> {
+        createButton("List number in number cache", e -> {
             try {
-                textArea.setText(Integer.toString(numberCache.size()));
+                textArea.setText(" "+numberCache.size());
             } catch (Exception err) {
                 System.out.println("An error occurred.");
             }
         }, buttonPanel);
 
-        createButton("", e -> {
+        createButton("Merge int and number cache", e -> {
             try {
-
-                textArea.setText("");
+                numberCache.addAll(intCache);
+                textArea.setText(" intCache added to numberCache");
             } catch (Exception err) {
                 System.out.println("An error occurred.");
             }
         }, buttonPanel);
 
-        createButton("", e -> {
+        createButton("clear number cache", e -> {
             try {
-
-                textArea.setText("");
+                numberCache.clear();
+                textArea.setText(" numberCache cleared");
             } catch (Exception err) {
                 System.out.println("An error occurred.");
             }
         }, buttonPanel);
 
-        createButton("", e -> {
-            try {
-
-                textArea.setText("");
-            } catch (Exception err) {
-                System.out.println("An error occurred.");
-            }
-        }, buttonPanel);
-
+        // Add button panel to the frame
+        add(buttonPanel, BorderLayout.EAST);
+        setLocationRelativeTo(null);
+        setVisible(true);
     }
 
     private void createButton(String text, ActionListener listener, JPanel panel) {

@@ -30,7 +30,7 @@ public class Main extends JFrame {
             try {
                 textArea.setText("Hello World");
             } catch (Exception err) {
-                System.out.println("An error occurred.");
+                System.out.println("Error: " + err.getMessage());
             }
         }, buttonPanel);
 
