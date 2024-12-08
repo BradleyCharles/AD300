@@ -4,8 +4,6 @@ import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-
-
 public class Main extends JFrame {
 
     // Constructor for the main frame
@@ -33,12 +31,9 @@ public class Main extends JFrame {
         NumberBox<Double> numberBoxDouble = new NumberBox<>(3.14);
         //NumberBox<String> numberBoxString = new NumberBox<>("String");
 
-
         StringProcessor stringProcessor = new StringProcessor();
 
-        // Input string
         String palindrome = "Bob drives a racecar really fast";
-
 
         // Display buttons
         createButton("Print String Box", e -> {
